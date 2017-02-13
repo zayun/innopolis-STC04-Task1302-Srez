@@ -1,12 +1,17 @@
 package com.innopolis.smoldyrev;
 
+import com.innopolis.smoldyrev.stockers.DigCollector;
+import com.innopolis.smoldyrev.threadsPack.ThreadGenerator;
+import com.innopolis.smoldyrev.threadsPack.ThreadPrintCollection;
+
 public class Main {
 
     public static void main(String[] args) {
-        Thread t1 = new Thread(new ThreadGenerator());
-        t1.start();
 
+        Thread t1 = new Thread(new ThreadGenerator());
         Thread t2 = new Thread(new ThreadPrintCollection());
+
+        t1.start();
         t2.start();
 
         try {
@@ -15,8 +20,8 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        DigCollector dc = new DigCollector();
-        System.out.println(dc.getArr().toString());
+
+        System.out.println(DigCollector.getArr().toString());
     }
 
 

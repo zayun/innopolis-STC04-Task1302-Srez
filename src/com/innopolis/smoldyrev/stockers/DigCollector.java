@@ -1,4 +1,4 @@
-package com.innopolis.smoldyrev;
+package com.innopolis.smoldyrev.stockers;
 
 import java.util.HashSet;
 

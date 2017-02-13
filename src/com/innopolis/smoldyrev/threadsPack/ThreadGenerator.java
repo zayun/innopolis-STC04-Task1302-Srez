@@ -1,4 +1,6 @@
-package com.innopolis.smoldyrev;
+package com.innopolis.smoldyrev.threadsPack;
+
+import com.innopolis.smoldyrev.stockers.DigCollector;
 
 import java.util.Random;
 
@@ -8,7 +10,9 @@ import java.util.Random;
 public class ThreadGenerator implements Runnable {
     @Override
     public void run() {
+
         Random r = new Random();
+
         try {
             while (!DigCollector.isEnough()) {
                 Thread.sleep(1000);
@@ -17,5 +21,6 @@ public class ThreadGenerator implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 }

@@ -1,6 +1,6 @@
-package com.innopolis.smoldyrev;
+package com.innopolis.smoldyrev.threadsPack;
 
-import java.util.Random;
+import com.innopolis.smoldyrev.stockers.DigCollector;
 
 /**
  * Created by smoldyrev on 13.02.17.
@@ -9,6 +9,7 @@ public class ThreadPrintCollection implements Runnable{
 
     @Override
     public void run() {
+
         try {
             while (!DigCollector.isEnough()) {
                 Thread.sleep(5000);
@@ -17,5 +18,6 @@ public class ThreadPrintCollection implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 }
