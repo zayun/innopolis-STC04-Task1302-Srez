@@ -6,6 +6,7 @@ import java.util.HashSet;
  * Created by smoldyrev on 13.02.17.
  */
 public class DigCollector {
+
     private static volatile HashSet<Integer> arr = new HashSet<>(100);
     private static volatile boolean enough;
 
